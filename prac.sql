@@ -201,7 +201,7 @@ on e.emp_id = b.mgr_id; -- left join includes all of the rows from the left tabl
 
 select e.emp_id,e.first_name,b.branch_name
 from employee e
-join branch b
+right join branch b
 on e.emp_id = b.mgr_id; -- right join includes all of the rows from the right table but only the rows that satisfy condition will be included from another table
 
 -- ....................................................nested queries.......................................................

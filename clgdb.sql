@@ -82,6 +82,8 @@ select * from mba_students;
 select roll_no, id, concat( first_name,' ', last_name) as std_name, std_address, phone_no, alt_phone_no, semester 
 from mba_students order by roll_no;
 
+-- ..................................................................................................................................................
+
 CREATE TABLE diploma (
   roll_no INT auto_increment,
   first_name varchar(20) not null,
@@ -161,6 +163,6 @@ select * from diploma;
 select roll_no, id, concat( first_name,' ', last_name) as std_name, std_address, phone_no, alt_phone_no, semester
 from diploma order by roll_no;
 
-create table fee_structure
+-- .............................................................................................................................................
 
 

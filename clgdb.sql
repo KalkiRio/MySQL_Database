@@ -79,9 +79,88 @@ VALUES
 ('Gunjan', 'Dutt', 'B6-83, Civil Lines, Jaipur', 1092198765, NULL, 1, 138);
 
 select * from mba_students;
-select roll_no, id, concat( first_name,' ', last_name) as std_name, std_address, phone_no, alt_phone_no 
+select roll_no, id, concat( first_name,' ', last_name) as std_name, std_address, phone_no, alt_phone_no, semester 
 from mba_students order by roll_no;
 
+CREATE TABLE diploma (
+  roll_no INT auto_increment,
+  first_name varchar(20) not null,
+  last_name varchar(20) default null,
+  std_address VARCHAR(50),
+  phone_no BIGINT(10),
+  alt_phone_no BIGINT(10) default null,
+  semester INT DEFAULT 1,
+  id int(3),
+  primary key(roll_no, id)
+);
 
+INSERT INTO diploma (first_name, last_name, std_address, phone_no, alt_phone_no, id) VALUES
+('Aakash', 'Sharma', 'A-1, Sector-10, Noida', 9876543210, 8765432109, 101),
+('Aarti', 'Singh', 'B-2, Rajouri Garden, Delhi', 8765432190, 7654321098, 102),
+('Abhay', 'Verma', 'C-3, Lajpat Nagar, Delhi', 7654321980, 6543210987, 103),
+('Abhishek', 'Kumar', 'D-4, Rohini, Delhi', 6543219870, 5432109876, 104),
+('Aditi', 'Murugan', 'E-5, Anna Nagar, Chennai', 5432198760, 4321098765, 105),
+('Aditya', 'Rao', 'F-6, Banjara Hills, Hyderabad', 4321987650, 3210987654, 106),
+('Afreen', 'Khan', 'G-7, Park Circus, Kolkata', 3219876540, 2109876543, 107),
+('Aishwarya', 'Rai', 'H-8, Bandra, Mumbai', 2198765430, 1098765432, 108),
+('Ajay', 'Singh', 'I-9, Model Town, Ludhiana', 1987654320, NULL, 109),
+('Akash', 'Lal', 'J-10, MG Road, Gurgaon', 1876543290, NULL, 110),
+('Akshay', 'Dutt', 'K-11, Civil Lines, Jaipur', 1765432190, NULL, 111),
+('Alia', 'Bhatt', 'L-12, Juhu, Mumbai', 1654321980, NULL, 112),
+('Aman', 'Roy', 'M-13, Park Street, Kolkata', 1543298760, NULL, 113),
+('Amit', 'Patil', 'N-14, MG Road, Bangalore', 1432198765, NULL, 114),
+('Amrita', 'Ahmed', 'O-15, Charminar Road, Hyderabad', 1321987654, NULL, 115),
+('Ananya', 'Thomas', 'P-16, Marine Drive, Mumbai', 1219876543, NULL, 116),
+('Anil', 'Mehta', 'Q-17, Cuffe Parade, Mumbai', 1198765432, NULL, 117),
+('Anjali', 'Sharma', 'R-18, Sector-11, Noida', 1098765432, NULL, 118),
+('Ankit', 'Singh', 'S-19, Rajouri Garden, Delhi', 1097654321, NULL, 119),
+('Ankur', 'Verma', 'T-20, Lajpat Nagar, Delhi', 1096543219, NULL, 120),
+('Anshul', 'Kumar', 'U-21, Rohini, Delhi', 1095432198, NULL, 121),
+('Anurag', 'Murugan', 'V-22, Anna Nagar, Chennai', 1094321987, NULL, 122),
+('Anushka', 'Rao', 'W-23, Banjara Hills, Hyderabad', 1093219876, NULL, 123),
+('Arjun', 'Khan', 'X-24, Park Circus, Kolkata', 1092198765, NULL, 124),
+('Arnav', 'Rai', 'Y-25, Bandra, Mumbai', 1091987654, NULL, 125),
+('Arti', 'Singh', 'Z-26, Model Town, Ludhiana', 1091876543, NULL, 126),
+('Ashish', 'Lal', 'A1-27, MG Road, Gurgaon', 1091765432, NULL, 127),
+('Ashok', 'Dutt', 'A2-28, Civil Lines, Jaipur', 1091654321, NULL, 128),
+('Asif', 'Bhatt', 'A3-29, Juhu, Mumbai', 1091543219, NULL, 129),
+('Atul', 'Roy', 'A4-30, Park Street, Kolkata', 1091432198, NULL, 130),
+('Avinash', 'Patil', 'A5-31, MG Road, Bangalore', 1091321987, NULL, 131),
+('Ayush', 'Ahmed', 'A6-32, Charminar Road, Hyderabad', 1091219876, NULL, 132),
+('Babita', 'Thomas', 'A7-33, Marine Drive, Mumbai', 1091198765, NULL, 133),
+('Bablu', 'Mehta', 'A8-34, Cuffe Parade, Mumbai', 1091187654, NULL, 134),
+('Badrinath', 'Sharma', 'A9-35, Sector-12, Noida', 1091176543, NULL, 135),
+('Bahubali', 'Singh', 'B1-36, Rajouri Garden, Delhi', 1091165432, NULL, 136),
+('Bala', 'Verma', 'B2-37, Lajpat Nagar, Delhi', 1091154321, NULL, 137),
+('Balaji', 'Kumar', 'B3-38, Rohini, Delhi', 1091143219, NULL, 138),
+('Baldev', 'Murugan', 'B4-39, Anna Nagar, Chennai', 1091132198, NULL, 139),
+('Balram', 'Rao', 'B5-40, Banjara Hills, Hyderabad', 1091121987, NULL, 140),
+('Banita', 'Khan', 'B6-41, Park Circus, Kolkata', 1091119876, NULL, 141),
+('Bansi', 'Rai', 'B7-42, Bandra, Mumbai', 1091118765, NULL, 142),
+('Barkha', 'Singh', 'B8-43, Model Town, Ludhiana', 1091117654, NULL, 143),
+('Barun', 'Lal', 'B9-44, MG Road, Gurgaon', 1091116543, NULL, 144),
+('Basanti', 'Dutt', 'C1-45, Civil Lines, Jaipur', 1091115432, NULL, 145),
+('Basavaraj', 'Bhatt', 'C2-46, Juhu, Mumbai', 1091114321, NULL, 146),
+('Basheer', 'Roy', 'C3-47, Park Street, Kolkata', 1091113219, NULL, 147),
+('Basil', 'Patil', 'C4-48, MG Road, Bangalore', 1091112198, NULL, 148),
+('Bela', 'Ahmed', 'C5-49, Charminar Road, Hyderabad', 1091111987, NULL, 149),
+('Bhavesh', 'Thomas', 'C6-50, Marine Drive, Mumbai', 1091111876, NULL, 150),
+('Bhavya', 'Mehta', 'C7-51, Cuffe Parade, Mumbai', 1091111765, NULL, 151),
+('Bhumi', 'Sharma', 'C8-52, Sector-13, Noida', 1091111654, NULL, 152),
+('Bhumika', 'Singh', 'C9-53, Rajouri Garden, Delhi', 1091111543, NULL, 153),
+('Bhuvan', 'Verma', 'D1-54, Lajpat Nagar, Delhi', 1091111432, NULL, 154),
+('Bhuvneshwar', 'Kumar', 'D2-55, Rohini, Delhi', 1091111321, NULL, 155),
+('Bijay', 'Murugan', 'D3-56, Anna Nagar, Chennai', 1091111219, NULL, 156),
+('Bikram', 'Rao', 'D4-57, Banjara Hills, Hyderabad', 1091111198, NULL, 157),
+('Bimal', 'Khan', 'D5-58, Park Circus, Kolkata', 1091111187, NULL, 158),
+('Subir', 'Chowdhary', 'D5-58, Park Circus, Kolkata', 9734767866, NULL, 159),
+('Sheetal', 'KUmari', 'D5-58, Noida, Uttar Pradesh', 1091111187, 987645553, 160),
+('Zahir', 'Khan', 'D5-67, Park Circus, Kolkata', 1091111187, NULL, 161);
+
+select * from diploma;
+select roll_no, id, concat( first_name,' ', last_name) as std_name, std_address, phone_no, alt_phone_no, semester
+from diploma order by roll_no;
+
+create table fee_structure
 
 
